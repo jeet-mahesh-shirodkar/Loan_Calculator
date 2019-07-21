@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Loan Calculator</title>
+    <link rel="stylesheet" href="main.css">
+    <script src= "main.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Enter Loan Data</th>
+            <td></td>
+        <tr>
+            <th>Loan Balance,Cumulative Equity and Interest Payments</th>
+        </tr>
+        <tr>
+            <td>Amount of the Loan ($):</td>
+            <td><input id="amount" onchange="calculate();" /></td>
+            <td rowspan=8>
+            <canvas id="graph" width="400" height="250"></canvas></td>
+        </tr>
+        </td>
+        <tr>
+            <td>Annual Interest (%): </td>
+        
+        <td><input id="apr" onchange="calculate();" /></td>
+        </tr>
+        <tr>
+            <td>Replacement period(years):</td>
+            <td><input id="years" onchange="calculate();" /></td>
+        </tr>
+        <tr>
+           <td>Zip Code (to find the lender:)</td>
+           <td><input id="zipcode" onchange="calculate();"/></td> 
+        </tr>
+        <tr>
+            <td>Ap  proximate Payment :</td>
+            <td><button onclick="calculate();">Calculate</button></td>
+        </tr>
+        <tr>
+            <td>Monthly Payment :</td>
+            <td><span class="output" id="payment"></span></td>
+        </tr>
+        <tr>
+            <td>Total Payment :</td>
+            <td><span class="output" id="total"></span></td>
+        </tr>
+        <tr>
+            <td>Total Interest :</td>
+            <td><span class="output" id="totalInterest"></span></td>
+        </tr>
+        <tr>
+            <th>Sponsors :</th>
+            <td colspan=2>
+            Apply for your loan with one of these find lenders
+            <div id="lenders"></div></td>
+        </tr>
+        </tr>
+    </table>
+</body>
+</html>
